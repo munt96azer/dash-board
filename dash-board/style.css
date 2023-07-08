@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  list-style: none;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+body {
+  background-color: #001;
+  display: flex;
+}
+body .menu {
+  background-color: #123;
+  width: 80px;
+  height: 100vh;
+  padding: 15px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+body .menu:hover {
+  width: 400px;
+}
+body .menu ul {
+  position: relative;
+  height: 100%;
+}
+body .menu ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  transition: 0.5s;
+}
+body .menu ul li a:hover:hover,
+body .menu ul li a .active:hover {
+  background-color: rgba(255, 255, 255, 0.3333333333);
+}
+body .menu ul li a i {
+  font-size: 30px;
+}
+body .menu ul .log-out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+body .menu ul .log-out a {
+  background-color: red;
+}
+body .menu ul .profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+body .menu ul .profile .img-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 3px solid silver;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+body .menu ul .profile .img-box img {
+  width: 100%;
+}
+body .menu ul .profile h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+body .contant {
+  width: 100%;
+  margin: 10px;
+}
+body .contant .title-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #0481ff;
+  border-radius: 8px;
+}
+body .contant .data-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+body .contant .data-info .box {
+  background-color: #123;
+  height: 180px;
+  flex-basis: 180px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 8px;
+}
+body .contant .data-info .box:hover:hover {
+  background-color: rgba(255, 255, 255, 0.3333333333);
+}
+body .contant .data-info .box i {
+  font-size: 40px;
+}
+body .contant .data-info .box .data {
+  text-align: center;
+}
+body .contant .data-info .box .data p {
+  font-size: 20px;
+}
+body .contant .data-info .box .data span {
+  font-size: 30px;
+}
+body .contant table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 8px;
+}
+body .contant table td,
+body .contant table th {
+  background-color: #123;
+  height: 40px;
+  border-radius: 8px;
+}
+body .contant table th {
+  background-color: #0481ff;
+}
+body .contant table td:hover:hover {
+  background-color: rgba(255, 255, 255, 0.3333333333);
+}
+body .contant table .count,
+body .contant table .price {
+  padding: 6px;
+  border-radius: 6px;
+}
+body .contant table .count {
+  background-color: yellow;
+  color: #001;
+}
+body .contant table .price {
+  background-color: green;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  body .menu {
+    width: 100%;
+    height: 630px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .menu:hover {
+    width: 100%;
+  }
+  body .menu ul li a {
+    gap: 130px;
+    margin-top: 10;
+  }
+  body .menu .profile {
+    justify-content: start;
+    padding-bottom: 30px;
+  }
+  body .contant {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

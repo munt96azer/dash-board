@@ -1,0 +1,167 @@
+$mainColor: #123;
+$secColor: #0481ff;
+$border-radius: 8px;
+// mixin
+@mixin hoverBack {
+  &:hover {
+    background-color: #ffffff55;
+  }
+}
+// main rules
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  list-style: none;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+body {
+  background-color: #001;
+  display: flex;
+  // menu
+  .menu {
+    background-color: $mainColor;
+    width: 80px;
+    height: 100vh;
+    padding: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+    &:hover {
+      width: 400px;
+    }
+    ul {
+      position: relative;
+      height: 100%;
+      li {
+        a {
+          display: block;
+          text-decoration: none;
+          padding: 10px;
+          margin: 10px 0;
+          border-radius: $border-radius;
+          display: flex;
+          align-items: center;
+          gap: 80px;
+          transition: 0.5s;
+          &:hover,
+          .active {
+            @include hoverBack;
+          }
+          i {
+            font-size: 30px;
+          }
+        }
+      }
+      .log-out {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        a {
+          background-color: red;
+        }
+      }
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .img-box {
+          width: 50px;
+          height: 50px;
+          border-radius: 50px;
+          border: 3px solid silver;
+          overflow: hidden;
+          flex-shrink: 0;
+          img {
+            width: 100%;
+          }
+        }
+        h2 {
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  // contact
+  .contant {
+    width: 100%;
+    margin: 10px;
+    .title-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      background-color: $secColor;
+      border-radius: $border-radius;
+    }
+
+    .data-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px;
+      .box {
+        background-color: $mainColor;
+        height: 180px;
+        flex-basis: 180px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: $border-radius;
+        &:hover {
+          @include hoverBack;
+        }
+        i {
+          font-size: 40px;
+        }
+        .data {
+          text-align: center;
+          p {
+            font-size: 20px;
+          }
+          span {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    // table
+    table {
+      width: 100%;
+      text-align: center;
+      border-spacing: 8px;
+      td,
+      th {
+        background-color: $mainColor;
+        height: 40px;
+        border-radius: $border-radius;
+      }
+      th {
+        background-color: $secColor;
+      }
+      td {
+        &:hover {
+          @include hoverBack;
+        }
+      }
+      .count,
+      .price {
+        padding: 6px;
+        border-radius: 6px;
+      }
+      .count {
+        background-color: yellow;
+        color: #001;
+      }
+      .price {
+        background-color: green;
+      }
+    }
+  }
+}
+@import "media"
