@@ -146,4 +146,37 @@ body .contant table .count {
 }
 body .contant table .price {
   background-color: green;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  body .menu {
+    width: 100%;
+    height: 630px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .menu:hover {
+    width: 100%;
+  }
+  body .menu ul li a {
+    gap: 130px;
+    margin-top: 10;
+  }
+  body .menu .profile {
+    justify-content: start;
+    padding-bottom: 30px;
+  }
+  body .contant {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
